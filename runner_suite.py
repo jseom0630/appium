@@ -7,8 +7,8 @@ if __name__ == '__main__':
     runner = HtmlTestRunner.HTMLTestRunner(
         output='reports',
         report_name='testsuite_report',
-        report_title='All Tests Results',
-        combine_reports=True
+        report_title='All Tests Results'
+        # combine_reports=True
     )
     suite = unittest.TestSuite()
     suite.addTests(TestSuite1())

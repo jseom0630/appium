@@ -10,14 +10,15 @@ from page.page_splash import PageSplash
 
 import unittest
 from config.webdriver_setup import WebDriverSetup
+from test.testcase.test_start import TestAppLaunch
 
 
 
 
 
-class TestSplash(WebDriverSetup):
+class TestSplash(unittest.TestCase):
     def setUp(self):
-        self.page = PageSplash(WebDriverSetup.driver)
+        self.page = PageSplash(TestAppLaunch.driver)
 
     def test_00_start_displayed(self):
         is_start_button_visible = self.page.is_element_visible(self.page.btn_start)  # self.page.btn

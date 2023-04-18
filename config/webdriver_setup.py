@@ -20,9 +20,9 @@ class WebDriverSetup(unittest.TestCase):
             'platformName': cls.deviceconfig.PLATFORM_NAME,
             'platformVersion': cls.deviceconfig.PLATFORM_VERSION,
             'deviceName': cls.deviceconfig.DEVICE_NAME,
-            'automationName': cls.deviceconfig.AUTOMATION_NAME
-            # 'appPackage': cls.appconfig.APP_PACKAGE,
-            # 'appActivity': cls.appconfig.APP_ACTIVITY
+            'automationName': cls.deviceconfig.AUTOMATION_NAME,
+            'appPackage': cls.appconfig.APP_PACKAGE,
+            'appActivity': cls.appconfig.APP_ACTIVITY
             # 'noReset': config.NO_RESET # noReset 설정이 필요한 경우 주석 해제
         }
         appium_url = f"http://{cls.envconfig.SERVER_IP}:{cls.envconfig.SERVER_PORT}/wd/hub"

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Tests Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">All Tests Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-18 17:06:52</p>
+                <p class='attribute'><strong>Duration: </strong>15.12 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 0, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test.testcase.test_popup.TestPopup</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_01_ok_button_click</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session/817f3020-99bf-49b3-b345-9cbc7d53c158/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b564250>: Failed to establish a new connection: [Errno 61] Connection refused'))</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x10b564250>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jseom/PYTHON_Project/appium/src/test/testcase/test_popup.py", line 16, in test_01_ok_button_click
+    self.page.click(self.page.btn_ok)
+  File "/Users/jseom/PYTHON_Project/appium/src/page/page_base.py", line 12, in click
+    def click(self, by_locator):        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/expected_conditions.py", line 139, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/webdriver.py", line 387, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 438, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 290, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 311, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session/817f3020-99bf-49b3-b345-9cbc7d53c158/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b564250>: Failed to establish a new connection: [Errno 61] Connection refused'))
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_02_mkagree_button_click</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:243:15)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:354:14)
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:410:3)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/Users/jseom/PYTHON_Project/appium/src/test/testcase/test_popup.py", line 22, in test_02_mkagree_button_click
+    self.page.click(self.page.btn_mkagree)
+  File "/Users/jseom/PYTHON_Project/appium/src/page/page_base.py", line 12, in click
+    def click(self, by_locator):        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/expected_conditions.py", line 139, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/webdriver.py", line 387, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/errorhandler.py", line 30, in check_response
+    raise wde
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:243:15)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:354:14)
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:410:3)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_03_popupclose_button_click</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:243:15)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:354:14)
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:410:3)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/Users/jseom/PYTHON_Project/appium/src/test/testcase/test_popup.py", line 27, in test_03_popupclose_button_click
+    self.page.click(self.page.btn_close)
+  File "/Users/jseom/PYTHON_Project/appium/src/page/page_base.py", line 12, in click
+    def click(self, by_locator):        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/support/expected_conditions.py", line 139, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/webdriver.py", line 387, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/errorhandler.py", line 30, in check_response
+    raise wde
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/appium/webdriver/errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "/Users/jseom/PYTHON_Project/appium/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:243:15)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:354:14)
+    at param (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:410:3)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 15.12 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

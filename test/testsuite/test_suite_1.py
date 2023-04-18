@@ -1,9 +1,9 @@
 import unittest
 from test.testcase.test_splash import TestSplash
 from test.testcase.test_start import TestAppLaunch
-from test.testcase.test_login import TestLogin
+# from test.testcase.test_login import TestLogin
 from test.testcase.test_popup import TestPopup
-from test.testcase.test_logout import TestLogout
+# from test.testcase.test_logout import TestLogout
 from test.testcase.test_main import TestMain
 
 class TestSuite1(unittest.TestSuite):
